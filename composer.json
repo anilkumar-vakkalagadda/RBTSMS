@@ -1,0 +1,21 @@
+{
+    "name": "rbt/yii2-rbtsms",
+    "description": "RBT SMS Component",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension"],
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "rbt",
+            "email": "anil.vakkalagadda@raybiztech.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "rbt\\sms\\": ""
+        }
+    }
+}
