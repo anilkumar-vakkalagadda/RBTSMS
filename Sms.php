@@ -7,18 +7,22 @@ namespace rbt\sms;
  */
 class SMS 
 {
+	private $APIKEY;
+	private $SENDER_NAME;
+	private $SMS_URL;
+	
 	public static function SmsSend($phone_number, $message)
 	{
 		$postvars = [
                 'method' => 'sms',
-                'api_key' => Yii::$app->params['APIKEY'],
+                'api_key' => Yii::$app->sms->APIKEY,
                 'to'   => $phone_number,
-                'sender' => Yii::$app->params['sender_name'],
+                'sender' => Yii::$app->sms->SENDER_NAME,
                 'message' => $message,
                 'format' => 'xml',
                 'unicode' => 1
         ];
-        $url= Yii::$app->params['service_url'];
+        $url= Yii::$app->sms->SMS_URL;
         // create a new cURL resource
         $ch = curl_init();
         // set URL and other appropriate options

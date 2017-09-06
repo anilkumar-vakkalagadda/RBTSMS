@@ -31,9 +31,9 @@ return [
     'components' => [
         'sms'	=> [
     		'class' => '\rbt\sms\Sms',
-    		'api_key' => 'XYZ',
-    		'sender_name' => 'RBT',
-    		'url'=>'rbt.net'    		
+    		'APIKEY' => 'apikey',
+    		'SENDER_NAME' => 'sms sender name',
+    		'SMS_URL'=>'sms service url'    		
     	],
     ]
 ];
@@ -45,6 +45,6 @@ Usage
 Once the extension is installed, simply use it in your code by  :
 
 ```php
-<?= \rbt\sms\AutoloadExample::widget(); ?>```
+<?= \rbt\sms\Sms::SmsSend($phone_number,$message); ?>```
 
 
